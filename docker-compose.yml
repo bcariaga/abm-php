@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - "./.mysql-data/db:/var/lib/mysql"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: ifts_21
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '9991:80'
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: rootpw
+      MYSQL_ROOT_PASSWORD: rootpw 
+  nginx:
+    image: trafex/alpine-nginx-php7:latest
+    volumes:
+      - C:/Users/A309379/source/repos/apuntes/programacion-web/proyecto1/www/html:/var/www/html
+    ports:
+      - 9990:8080

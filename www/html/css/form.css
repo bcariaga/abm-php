@@ -1,0 +1,56 @@
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type="text"],
+input[type="number"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type="text"]:read-only,
+input[type="number"]:read-only{
+    background-color: lightgray;
+}
+
+
+
+input[type="submit"], .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    text-decoration: none;
+}
+.btn-danger{
+    background-color:red;
+    color: white;
+}
+
+.small{
+    width: 10%;
+    margin-bottom: 1em;
+}
+.pull-right{
+    margin-left:auto;
+    display:block;
+    margin-right: 0;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+
+.formContainer {
+    margin: 0 15em;
+}
+
+.center-div{
+    text-align: center;
+}
