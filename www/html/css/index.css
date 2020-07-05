@@ -18,6 +18,9 @@ h3 {
 h4 {
     font-size: medium;
 }
+small {
+    font-size: small;
+}
 
 .title{
     margin: .5em 0;
@@ -25,4 +28,12 @@ h4 {
 
 a{
     text-decoration: none;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+.flex-item{
+    flex: 1;
 }
